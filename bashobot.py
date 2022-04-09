@@ -1,3 +1,5 @@
+#!/opt/homebrew/Caskroom/miniforge/base/bin/python
+
 import json
 import praw
 import requests
@@ -38,7 +40,7 @@ def find_valid_and_load(haiku_files):                   # arg is a list of haiku
 ### Main script
 if __name__=="__main__":
     ### Make sure no poems have been submitted today
-    with open("date_last_posted.txt","r") as f:
+    with open("/Users/steve/Documents/code/bashobot/date_last_posted.txt","r") as f:
         date_last_posted = f.read()                     # the date a haiku was last posted by this script 
         today_str = f"{date.today()}"                   # today's date formatted as a string
         assert today_str != date_last_posted , "This script was already used today"
