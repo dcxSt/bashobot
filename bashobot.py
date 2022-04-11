@@ -62,7 +62,8 @@ if __name__=="__main__":
 
 
     ### Randomly iterate through haiku data files until you find one that has haiku in it that haven't yet been posted by this script
-    haiku_files = [ROOT + "data/" + fname for fname in os.listdir("./data") if i[-5:] == ".json"] 
+    datadir = ROOT + "data/"
+    haiku_files = [datadir + i for i in os.listdir(datadir) if i[-5:] == ".json"] 
     random.shuffle(haiku_files)                         # shuffle the list
     haiku_dict , path_to_json = find_valid_and_load(haiku_files) # load the source json haiku into a python dictionary
 
