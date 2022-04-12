@@ -87,7 +87,7 @@ if __name__=="__main__":
     print(f"\n\nPosted\n{haikus[idx]}")
 
     ### Update last_posted.txt which contains the date of the last poem that was posted using this script
-    with open("date_last_posted.txt","w") as f:
+    with open(ROOT + "date_last_posted.txt","w") as f:
         f.write(f"{date.today()}")
 
     ### It is posted successfully, update json data 
