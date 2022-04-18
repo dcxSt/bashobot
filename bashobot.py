@@ -85,6 +85,8 @@ if __name__=="__main__":
     # assert False                                        # forcefully end the program, for testing purposes
     traditional_haiku.submit(haiku, selftext=selftext)
     print(f"\n\nPosted\n{haikus[idx]}")
+    try:print(f"by {options['author']}")
+    except:pass
 
     ### Update last_posted.txt which contains the date of the last poem that was posted using this script
     with open(ROOT + "date_last_posted.txt","w") as f:
